@@ -14,16 +14,8 @@ def reduce (source_array, starting_value = 0)
   
   i = 0
   while i < source_array.size do
-    # if (source_array == [ false, nil, nil, nil])
-    #   puts i
-    #   puts source_array[i]
-    #   puts result
-    #   puts source_array[i] && result
-    # end
     
     result = yield(source_array[i], result)
-    #puts "#{i}: #{result.inspect}= yield(#{source_array[i].inspect}, #{old_result.inspect}) "
-
     i += 1
   end
   return result.nil? ? false : result

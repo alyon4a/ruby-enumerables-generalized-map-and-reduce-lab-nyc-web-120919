@@ -9,9 +9,9 @@ def map (source_array)
 end
 
 def reduce (source_array, starting_value = 0)
-  if starting_value > 0 then 
-    result = starting_value
-  end
+  
+  result = starting_value
+  
   i = 0
   while i < source_array.size do
     result = yield(result, source_array[i])

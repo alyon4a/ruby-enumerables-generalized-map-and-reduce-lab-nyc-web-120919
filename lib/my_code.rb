@@ -9,7 +9,7 @@ def map (source_array)
 end
 
 def reduce (source_array, starting_value = 0)
-  if starting_value then 
+  if starting_value > 0 then 
     result = starting_value
   end
   i = 0

@@ -21,7 +21,7 @@ def reduce (source_array, starting_value = 0)
     #   puts source_array[i] && result
     # end
     result = yield(source_array[i], result)
-    puts "i: #{result.inspect} - #{source_array[i].inspect}"
+    puts "#{i}: #{result.inspect} - #{source_array[i].inspect}"
 
     i += 1
   end

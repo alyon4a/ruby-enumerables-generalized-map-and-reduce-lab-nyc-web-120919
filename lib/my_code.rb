@@ -20,11 +20,12 @@ def reduce (source_array, starting_value = 0)
     #   puts result
     #   puts source_array[i] && result
     # end
-    result = yield(result, source_array[i])
+    
+    result = yield(source_array[i], result)
     #puts "#{i}: #{result.inspect}= yield(#{source_array[i].inspect}, #{old_result.inspect}) "
 
     i += 1
   end
-  return result
+  return result.nil? ? false : result
   
 end

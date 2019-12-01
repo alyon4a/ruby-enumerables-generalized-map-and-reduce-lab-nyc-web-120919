@@ -14,7 +14,7 @@ def reduce (source_array, starting_value = 0)
   
   i = 0
   while i < source_array.size do
-    result = yield(result, source_array[i])
+    result = yield(source_array[i], result)
     i += 1
   end
   return result

@@ -20,7 +20,7 @@ def reduce (source_array, starting_value = 0)
       puts result
       puts source_array[i] && result
     end
-    result = yield(!!source_array[i], !!result)
+    result = yield(source_array[i], result)
     i += 1
   end
   return result
